@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Love ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec, #fff7f9);
+            color: #4a2630;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Floating hearts */
+        .heart {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            animation: float 8s linear infinite;
+            opacity: 0.7;
+            z-index: 0;
+        }
+
+        .heart:nth-child(1) { left: 10%; animation-delay: 1s; }
+        .heart:nth-child(2) { left: 25%; animation-delay: 4s; }
+        .heart:nth-child(3) { left: 45%; animation-delay: 2s; }
+        .heart:nth-child(4) { left: 65%; animation-delay: 5s; }
+        .heart:nth-child(5) { left: 85%; animation-delay: 3s; }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 90%;
+            max-width: 850px;
+            margin: auto;
+            padding: 60px 0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 55px 25px;
+            background: rgba(255, 255, 255, 0.75);
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(120, 40, 70, 0.15);
+            backdrop-filter: blur(8px);
+        }
+
+        .small-text {
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 13px;
+            color: #a64d68;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 55px;
+            color: #9e3153;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #70404e;
+            font-style: italic;
+        }
+
+        .heart-big {
+            font-size: 55px;
+            margin: 20px 0;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.18);
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.85);
+            margin-top: 30px;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(120, 40, 70, 0.12);
+        }
+
+        .card h2 {
+            text-align: center;
+            color: #9e3153;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        .letter {
+            font-size: 18px;
+            line-height: 1.9;
+            color: #51313b;
+        }
+
+        .letter p {
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            text-align: center;
+            font-size: 24px;
+            color: #9e3153;
+            font-style: italic;
+            margin: 30px 0;
+        }
+
+        .reasons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .reason {
+            background: #fff1f5;
+            padding: 20px;
+            border-radius: 18px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .reason span {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .final {
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .final h2 {
+            font-size: 40px;
+            color: #9e3153;
+            margin-bottom: 15px;
+        }
+
+        .final p {
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 22px;
+            font-style: italic;
+            color: #9e3153;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #986070;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 94%;
+                padding: 25px 0;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .letter {
+                font-size: 16px;
+            }
+
+            .reasons {
+                grid-template-columns: 1fr;
+            }
+
+            .final h2 {
+                font-size: 32px;
+            }
+        }
+        .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 700px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-gallery img {
+        height: auto;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating hearts -->
+    <div class="heart">❤️</div>
+    <div class="heart">💗</div>
+    <div class="heart">💕</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💖</div>
+
+    <div class="container">
+
+        <!-- Opening -->
+        <section class="hero">
+
+            <div class="small-text">
+                A little message from my heart
+            </div>
+
+            <h1>I'm Sorry, My Love ❤️</h1>
+
+            <div class="heart-big">
+                ❤️
+            </div>
+
+            <p class="subtitle">
+                There are some things that are difficult to say...
+                so I made this little place for my feelings.
+            </p>
+
+        </section>
+
+
+        <!-- Apology -->
+        <section class="card">
+
+            <h2>My Dearest Love 🌹</h2>
+
+            <div class="letter">
+                <p>
+    Richa, my Lakshmi Rasmalai ❤️, I know I hurt you, and I am truly sorry.
+    I don't want to make excuses. I just want you to know that hurting you was
+    never what I wanted.
+</p>
+
+                
+                <p>
+    Richa, my Lakshmi Rasmalai ❤️, I know I hurt you, and I am truly sorry.
+    I don't want to make excuses. I just want you to know that hurting you was
+    never what I wanted.
+</p>
+
+               <p>
+    You mean so much to me, Richa. ❤️
+    I love your smile, your little habits, your way of talking,
+    and all the small things that make you who you are.
+</p>
+
+                <p>
+                    I don't want my mistakes to become bigger than
+                    the love and memories we have shared.
+                </p>
+
+                <p>
+                    I'm not asking you to forget everything immediately.
+                    I only hope you can see how genuinely sorry I am
+                    and how much I care about you.
+                </p>
+
+            </div>
+
+            <div class="highlight">
+                <p>
+    I may make mistakes, but one thing I never want you to doubt is
+    how much I love you, Richa. ❤️
+</p>
+            </div>
+
+        </section>
+
+
+        <!-- Why I love you -->
+        <section class="card">
+
+            <h2>Our Beautiful Memories ❤️</h2>
+
+<p style="text-align:center; color:#70404e; font-style:italic; margin-bottom:20px;">
+    Every picture reminds me of how lucky I am to have you, Richa. ❤️
+</p>
+
+            <h2>Why You Are So Special To Me 💕</h2>
+            <div class="photo-gallery">
+
+    <img src="photos/1000172498.jpg" alt="Richa ❤️">
+
+    <img src="photos/1000173634.jpg" alt="Richa ❤️">
+
+    <img src="photos/1000173643.jpg" alt="Richa ❤️">
+
+</div>
+            <div class="reasons">
+
+                <div class="reason">
+                    <span>😊</span>
+                    Your smile is one of my favourite things in this world. ❤️
+                </div>
+
+                <div class="reason">
+                    <span>💗</span>
+                    Even the simplest moments feel special when I am with you. ❤️
+                </div>
+
+                <div class="reason">
+                    <span>🌸</span>
+                    I love all the little things that make you my Richa. ❤️
+                </div>
+
+                <div class="reason">
+                    <span>🫶</span>
+                    Having you in my life is something I never want to take for granted. ❤️
+                     </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Final message -->
+        <section class="card final">
+
+            <h2>One More Thing... ❤️</h2>
+
+            <p>
+    Richa, I don't want this little website to just be an apology.
+    I want it to remind you how much you mean to me. ❤️
+</p>
+
+            <br>
+
+            <p>
+                <b>I am truly sorry.</b>
+                <br>
+                I care about you deeply.
+                <br>
+                And I love you more than these words can explain.
+            </p>
+
+            <div class="signature">
+                Always yours , Rayon ❤️
+            </div>
+            <div style="text-align:center; margin-top:25px;">
+    <button onclick="alert('I love you, Richa ❤️ Forgive Me, My Love?🥺')"
+            style="padding:15px 30px; border:none; border-radius:30px;
+            background:#ff6b81; color:white; font-size:18px; cursor:pointer;">
+        Forgive Me? 🥺❤️
+    </button>
+</div>
+
+        </section>
+
+        <footer>
+            Made with love, honestly and from the heart ❤️
+        </footer>
+
+    </div>
+
+</body>
+</html>
